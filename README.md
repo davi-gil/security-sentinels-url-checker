@@ -18,6 +18,7 @@ resultado no terminal — funcionando tanto em Windows quanto em Linux.
 - Extrai os **engines que classificaram o alvo como malicioso**.
 - **Alerta visual** (verde = seguro, vermelho = malicioso) via Tkinter.
 - **Fallback para terminal** quando não há display (ex.: VM Linux headless).
+- **Geração de relatório** `.txt` com timestamp, resumo estatístico e recomendação.
 - **API key fora do código**, lida de variável de ambiente.
 
 ## Requisitos
@@ -58,6 +59,7 @@ A ferramenta pede a URL ou o caminho do arquivo a analisar e retorna o status.
 2. Consulta a API do VirusTotal (upload do arquivo **ou** lookup da URL).
 3. Lê `last_analysis_stats` para contar detecções maliciosas.
 4. Apresenta **SEGURO** ou **MALICIOSO**, com os engines que detectaram.
+5. Salva um relatório `relatorio_analise_AAAAMMDD_HHMMSS.txt` no diretório atual.
 
 ## Limitações conhecidas
 
@@ -69,7 +71,7 @@ A ferramenta pede a URL ou o caminho do arquivo a analisar e retorna o status.
 ## Trabalhos futuros
 
 - Integração com múltiplas APIs (Google Safe Browsing, AlienVault OTX).
-- Geração de relatório (`.txt`/HTML) com histórico das análises.
+- Exportação de relatório também em HTML/PDF, além do `.txt` atual.
 - Suporte a `.eml`/`.zip` e extração de links de documentos.
 - Heurísticas de similaridade de domínio e análise de caminho de URL.
 
