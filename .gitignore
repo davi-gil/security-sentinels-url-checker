@@ -5,3 +5,6 @@ __pycache__/
 .DS_Store
 venv/
 .venv/
+
+# Relatórios gerados em tempo de execução (podem conter alvos reais analisados)
+relatorio_analise_*.txt
